@@ -4,6 +4,13 @@
 
 <h4>Categories:<%= @post.categories.map(&:name).join(' ') %></h4>
 
+Commentors:
+<ul>
+  <%= @post.users.distinct.each do |user| %>
+    <li><%= link_to user.username, user_path(user) %></li>
+  <% end %>
+</ul>
+
 Comments:
 <ul>
   <%= @post.comments.each do |comment| %>
