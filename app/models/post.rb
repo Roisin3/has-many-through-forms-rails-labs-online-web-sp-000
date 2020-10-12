@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
         self.categories << category if !self.categories.include?(category)
       end
     end
-   
+
   end
 
 
