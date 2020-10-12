@@ -2,4 +2,4 @@
 
 <p><%= @post.content %></p>
 
-<h4>Categories:<%= @post.categories %></h4>
+<h4>Categories:<%= @post.categories.map(&:name).join(' ') %></h4>
