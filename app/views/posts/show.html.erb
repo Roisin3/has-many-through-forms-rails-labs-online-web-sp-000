@@ -3,3 +3,10 @@
 <p><%= @post.content %></p>
 
 <h4>Categories:<%= @post.categories.map(&:name).join(' ') %></h4>
+
+Comments:
+<ul>
+  <%= @post.comments.each do |comment| %>
+    <li><%= comment.user.username %> says: <%= comment.content %></li><br>
+  <% eend %>
+</ul>
